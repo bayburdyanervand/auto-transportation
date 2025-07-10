@@ -1,0 +1,170 @@
+{
+    "header": {
+        "nav": {
+            "home": "Home",
+            "about": "About Us",
+            "services": "Services",
+            "offers": "Offers",
+            "support": "Support"
+        },
+        "actions": {
+            "login": "Login",
+            "applyNow": "Apply Now",
+            "languages": {
+                "ru": "Russian",
+                "en": "English",
+                "ge": "Georgian"
+            }
+        },
+        "vinSearch": {
+            "placeholder": " Container"
+        },
+        "cancel": "Cancel"
+    },
+    "experienceSelection": {
+        "title": "Select Your Experience Level",
+        "description": "If you are a dealer involved in car imports, we have plenty of exciting news that will definitely interest you!",
+        "continue": "Continue",
+        "options": {
+            "beginner": {
+                "title": "Beginner Dealer",
+                "description": "Discover a whole world of innovative and promising solutions in the field of automotive logistics."
+            },
+            "experienced": {
+                "title": "Experienced Dealer",
+                "description": "Explore a range of innovative products and uncharted directions in this field."
+            }
+        }
+    },
+    "loginModal": {
+        "title": "Login",
+        "subtitle": "Discover a whole world of innovative and promising solutions in the field of automotive logistics.",
+        "usernamePlaceholder": "Username",
+        "passwordPlaceholder": "Password",
+        "rememberMe": "Remember me",
+        "noAccount": "Don't have an account?",
+        "submit": "Login"
+    },
+    "personalInfoForm": {
+        "title": "Personal Information",
+        "subtitle": "If you are a dealer involved in car imports...",
+        "placeholder": {
+            "fullName": "Full Name *",
+            "email": "Email Address",
+            "city": "City *",
+            "phone": "Phone Number *"
+        },
+        "services": {
+            "title": "Select the services you are interested in",
+            "options": {
+                "все_категории": "All Categories",
+                "доступ_к_счетам_аукционов": "Access to Auction Accounts",
+                "складские_услуги_загрузка_контейнеров": "Warehouse Services/Container Loading",
+                "экспедирование": "Freight Forwarding",
+                "внутренние_перевозки": "Domestic Transportation",
+                "брокер": "Broker",
+                "пост_экспедиторская_транспортировка": "Post-Forwarding Transportation",
+                "изъятие_транспортного_средства_до_оплаты": "Vehicle Seizure Before Payment",
+                "поддержка_клиентов": "Customer Support",
+                "предоставление_финансовых_ресурсов_и_финансовая_поддержка": "Financial Resources Provision and Support",
+                "консолидация": "Consolidation"
+            }
+        },
+        "submit": "Submit"
+    },
+    "containersBlock": {
+        "title": "Full Range",
+        "subtitle": "Car Sales and Cargo Delivery Services",
+        "description": "We present to you a new chapter in the history of Cargopolo — an innovative logistics company of the new generation! Our goal is to take conventional business processes to a new level of quality and efficiency. We are preparing a wide range of advanced solutions and new opportunities in the field of logistics for you."
+    },
+    "buttons": {
+        "apply": "Submit Application",
+        "calculate": "Calculate Price"
+    },
+    "ourservices": {
+        "cards": {
+            "safe": {
+                "title": "The Safest Transportation",
+                "text": "Our commitment to high safety standards is based on systematic risk prevention and minimizing the likelihood of vehicle damage.",
+                "link": "Learn more details"
+            },
+            "finance": {
+                "title": "Financial Support",
+                "text": "Asset financing at early stages, before acceptance or sale, as well as the option to utilize an accessible credit line on the Cargo Polo account for flexible fund management.",
+                "link": "Learn more details"
+            },
+            "custom": {
+                "title": "Custom Solutions",
+                "text": "Unlike standard solutions, our flexible and tailored services allow dealers to offer solutions that precisely meet the needs of their business or clients.",
+                "link": "Learn more details"
+            }
+        },
+        "overview": {
+            "title": "Our Services",
+            "description": [
+                "Cargo Polo's comprehensive services cover the entire process — from vehicle purchase to final delivery.",
+                "In addition to core solutions, we offer enhanced capabilities that increase the value of our service.",
+                "Partnering with us provides an optimal balance of benefits: saving time and money, as well as seamless access to key products regardless of purchase volume or business scope.",
+                "The Cargo Polo team consists of approximately 100 highly qualified specialists with over 10 years of industry experience.",
+                "Our employees' unique professional expertise guarantees results that meet the highest standards."
+            ],
+            "button": "Explore our services"
+        }
+    },
+    "calculator": {
+        "title": "Want to know the prices",
+        "subtitle": "Simply click the button to fill out the form and gain access to our calculator. With it, you can determine the optimal purchase price.",
+        "button": "Calculate the cost"
+    },
+    "latestOffers": {
+        "title": "Latest Offers",
+        "subtitle": "If you are a dealer or planning to engage in buying and selling cars, don’t miss our latest news and exclusive offers.",
+        "offers": [
+            {
+                "id": 1,
+                "date": "31 Mar 2025",
+                "title": "Recommendations for Developing a Car Dealership Business",
+                "description": "If you are a car dealer and want your business to grow, it is crucial to analyze current market trends and seize new opportunities...",
+                "tag": "Tips",
+                "linkText": "View details"
+            },
+            {
+                "id": 2,
+                "date": "08 Nov 2024",
+                "title": "Learn More About Auto Auctions",
+                "description": "The history of auto auctions dates back to the early 20th century when automobiles became an integral part of modern society...",
+                "tag": "Education",
+                "linkText": "View details"
+            },
+            {
+                "id": 3,
+                "date": "31 Oct 2023",
+                "title": "Cargo Polo Support Team",
+                "description": "Experienced automotive professionals possess an intricate understanding of the multifaceted technical intricacies...",
+                "tag": "Support",
+                "linkText": "View details"
+            }
+        ],
+        "button": "See more"
+    },
+    "deliverySection": {
+        "title": "Fast and Flexible Delivery",
+        "subtitle": "Wherever your vehicle is located, Cargo Polo is always nearby.",
+        "deliveryFrom": "Delivery from",
+        "deliveryTo": "Delivery to",
+        "usSection": {
+            "title": "50 States",
+            "description": "Vehicle transportation is available from all 50 U.S. states, as well as Canada, Alaska, and Hawaii. Our five warehouses are strategically located near major U.S. ports, ensuring a seamless transportation process without delays."
+        },
+        "eurasiaSection": {
+            "title": "Eurasia",
+            "description": "Transportation services extend to Eastern Europe, the Caucasus, and Central Asia, tailored to the specifics and conditions of each local market."
+        }
+    },
+    "managersSection": {
+        "title": "Our Managers",
+        "subtitle": "Premium service is created by a premium team. Cargo Polo is a team of qualified and experienced professionals. Our managers are always ready to share their expertise and provide competent assistance. In addition to client-facing managers, our team includes about 100 back-office specialists, including the Cargo Polo office in the USA. Together, they deliver top-notch service, the quality of which you experience from the very first interaction with our managers, ultimately ensuring a high level of customer service.",
+        "requestCall": "Request a Call",
+        "viewMore": "View More"
+    }
+}

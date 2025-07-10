@@ -1,0 +1,66 @@
+.experience-page {
+  max-width: 500px;
+  margin: 4rem auto;
+  text-align: center;
+
+  h1 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    color: #666;
+    margin-bottom: 2rem;
+  }
+
+  .experience-options {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+
+    .option {
+      display: flex;
+      align-items: flex-start;
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      padding: 1rem;
+      cursor: pointer;
+      gap: 1rem;
+      transition: border-color 0.2s;
+
+      input[type='radio'] {
+        margin-top: 0.3rem;
+      }
+
+      &.selected {
+        border-color: #28a745;
+        background-color: #f6fff8;
+      }
+
+      h3 {
+        margin: 0 0 0.5rem;
+        font-size: 1.1rem;
+      }
+
+      p {
+        margin: 0;
+        font-size: 0.9rem;
+      }
+    }
+  }
+
+  .continue-btn {
+    background-color: #28a745;
+    border: none;
+    border-radius: 2rem;
+    color: white;
+    font-size: 1rem;
+    padding: 0.75rem 2rem;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #218838;
+    }
+  }
+}
