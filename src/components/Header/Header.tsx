@@ -4,6 +4,7 @@ import './Header.scss';
 import logoUrl from '@/assets/images/logo.png';
 import { LoginModal } from '@components/ui/LoginModal';
 import { useHeaderLogic } from './useHeaderLogic';
+import { useLocation } from 'react-router-dom';
 
 export const Header: React.FC = () => {
   const {
@@ -24,6 +25,9 @@ export const Header: React.FC = () => {
     handleModalToggle,
   } = useHeaderLogic();
 
+  const location = useLocation();
+  const currentPath = location.pathname;
+
   return (
     <header className="header">
       <div className="header__left">
@@ -38,7 +42,7 @@ export const Header: React.FC = () => {
             type="text"
             placeholder={t('header.vinSearch.placeholder')}
             className="vin-search__input"
-            value={vin} 
+            value={vin}
             onFocus={() => setIsSearchFocused(true)}
             onBlur={() => {
               setTimeout(() => setIsSearchFocused(false), 100);
@@ -63,10 +67,12 @@ export const Header: React.FC = () => {
       <div className="header__right">
         {!isSearchFocused && (
           <nav className="header__nav">
-            <button className="nav-button active" onClick={() => navigate('/')}>
+            <button className={`nav-button ${currentPath === '/' ? 'active' : ''}`} onClick={() => navigate('/')}>
               {t('header.nav.home')}
             </button>
-            <button className="nav-button">{t('header.nav.about')}</button>
+            <button className={`nav-button ${currentPath === '/about' ? 'active' : ''}`} onClick={() => navigate('/about')}>
+              {t('header.nav.about')}
+            </button>
             <button className="nav-button">{t('header.nav.services')}</button>
             <button className="nav-button">{t('header.nav.offers')}</button>
             <button className="nav-button">{t('header.nav.support')}</button>
@@ -108,8 +114,18 @@ export const Header: React.FC = () => {
       {isMenuOpen && (
         <div className={`mobile-menu open`}>
           <nav className="mobile-nav">
-            <button className="nav-button">{t('header.nav.home')}</button>
-            <button className="nav-button">{t('header.nav.about')}</button>
+            <button className={`nav-button ${currentPath === '/' ? 'active' : ''}`} onClick={() => {
+              setIsMenuOpen(false);
+              navigate('/');
+            }}>
+              {t('header.nav.home')}
+            </button>
+            <button className={`nav-button ${currentPath === '/about' ? 'active' : ''}`} onClick={() => {
+              setIsMenuOpen(false);
+              navigate('/about');
+            }}>
+              {t('header.nav.about')}
+            </button>
             <button className="nav-button">{t('header.nav.services')}</button>
             <button className="nav-button">{t('header.nav.offers')}</button>
             <button className="nav-button">{t('header.nav.support')}</button>

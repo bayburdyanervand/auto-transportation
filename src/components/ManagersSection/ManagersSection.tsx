@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './ManagersSection.scss';
-import ManagerCallModal from '../ManagerCallModal/ManagerCallModal';
+import ManagerCallModal from '../HomePage/ManagerCallModal/ManagerCallModal';
+
 
 interface Manager {
   id: number;
@@ -9,11 +10,12 @@ interface Manager {
 }
 
 interface ManagersSectionProps {
-  t: (key: string) => string;
+  t?: (key: string) => string;
   managers?: Manager[];
 }
 
 const ManagersSection: React.FC<ManagersSectionProps> = ({ t, managers: backendManagers }) => {
+  const translate = t || ((key: string) => key);
   const defaultManagers: Manager[] = [
     { id: 1, name: 'Anna Smirnova', image: require('@/assets/images/managers/manager-1.png') },
     { id: 2, name: 'Ivan Petrov', image: require('@/assets/images/managers/manager-2.png') },
@@ -39,15 +41,15 @@ const ManagersSection: React.FC<ManagersSectionProps> = ({ t, managers: backendM
 
   return (
     <section className="managers-section" >
-      <h2 className="managers-section__title">{t('managersSection.title')}</h2>
-      <p className="managers-section__subtitle">{t('managersSection.subtitle')}</p>
+      <h2 className="managers-section__title">{translate('managersSection.title')}</h2>
+      <p className="managers-section__subtitle">{translate('managersSection.subtitle')}</p>
       <div className="managers-section__cards">
         {managers.map((manager) => (
           <div data-aos="zoom-in-up" className="managers-section__card" key={manager.id}>
             <img src={manager.image} alt={manager.name} />
             <div className="managers-section__info">
               <p>{manager.name}</p>
-              <button className={'managers-section__request'} onClick={() => openModal(manager)}>{t('managersSection.requestCall')}</button>
+              <button className={'managers-section__request'} onClick={() => openModal(manager)}>{translate('managersSection.requestCall')}</button>
             </div>
           </div>
         ))}

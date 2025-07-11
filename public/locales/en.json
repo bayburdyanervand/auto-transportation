@@ -193,17 +193,67 @@
         }
     },
     "footer": {
-      "footer.location": "Location:",
-      "footer.address": "Tbilisi, Akaki Beliashvili St. 187",
-      "footer.phone": "Phone Number:",
-      "footer.phoneNumber": "+995 (032) 2 05 00 00",
-      "footer.email": "Email:",
-      "footer.emailAddress": "info@cargopolo.com",
-      "footer.sitemap": "Sitemap",
-      "footer.sitemapItems": ["Home", "About Us", "Services", "Calculator", "Offers", "Support"],
-      "footer.services": "SERVICES",
-      "footer.serviceItems": ["B2B", "Retail", "Auctions", "Offers", "Calculator"],
-      "footer.customerService": "Customer Service",
-      "footer.customerServiceItems": ["Warehouse Space", "Our Team", "Contacts", "Flexibility"]
+        "footer.location": "Location:",
+        "footer.address": "Tbilisi, Akaki Beliashvili St. 187",
+        "footer.phone": "Phone Number:",
+        "footer.phoneNumber": "+995 (032) 2 05 00 00",
+        "footer.email": "Email:",
+        "footer.emailAddress": "info@cargopolo.com",
+        "footer.sitemap": "Sitemap",
+        "footer.sitemapItems": [
+            "Home",
+            "About Us",
+            "Services",
+            "Calculator",
+            "Offers",
+            "Support"
+        ],
+        "footer.services": "SERVICES",
+        "footer.serviceItems": [
+            "B2B",
+            "Retail",
+            "Auctions",
+            "Offers",
+            "Calculator"
+        ],
+        "footer.customerService": "Customer Service",
+        "footer.customerServiceItems": [
+            "Warehouse Space",
+            "Our Team",
+            "Contacts",
+            "Flexibility"
+        ]
+    },
+    "about": {
+        "banner": {
+            "aboutBanner.title": "About Cargo Polo",
+            "aboutBanner.description": "We are a logistics team ensuring the safe delivery of vehicles from US auctions. We work honestly, quickly, and conveniently for our clients.",
+            "aboutBanner.ariaLabel": "About Cargo Polo Company"
+        },
+        "feautures": {
+            "aboutFeatures.ariaLabel": "Our Advantages",
+            "aboutFeatures.features": [
+                {
+                    "title": "Safest Transportation",
+                    "text": "Ensuring safe transportation is not just words, but concrete actions implemented throughout the entire transport process...",
+                    "buttonText": "Apply Now"
+                },
+                {
+                    "title": "Financial Support",
+                    "text": "Our financial support programs are designed to provide comprehensive assistance to dealers through both direct and indirect means...",
+                    "buttonText": "Apply Now"
+                },
+                {
+                    "title": "Tailored Services",
+                    "text": "We move away from the standard approach in the logistics market and offer flexible services for dealers...",
+                    "buttonText": "Apply Now"
+                }
+            ]
+        },
+        "partners": {
+            "partners.title": "Our Partners",
+            "partners.description": "Cargo Polo's commitment to providing top-tier services is backed by strong and enduring partnerships with leading shipping companies.",
+            "partners.logoAlt": "Partner"
+        }
     }
 }

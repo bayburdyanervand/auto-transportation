@@ -1,13 +1,13 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import BannerSection from '@/components/BannerSection/BannerSection';
-import OurServicesSection from '@/components/OurServicesSection/OurServicesSection';
-import CalculatorSection from '@/components/CalculatorSection/CalculatorSection';
-import LatestOffersSection from '@/components/LatestOffersSection/LatestOffersSection';
+import BannerSection from '@/components/HomePage/BannerSection/BannerSection';
+import OurServicesSection from '@/components/HomePage/OurServicesSection/OurServicesSection';
+import CalculatorSection from '@/components/HomePage/CalculatorSection/CalculatorSection';
+import LatestOffersSection from '@/components/HomePage/LatestOffersSection/LatestOffersSection';
 import DeliverySection from '@/components/DeliverySection/DeliverySection';
 import ManagersSection from '../ManagersSection/ManagersSection';
-import AuctionPartnersSection from '../AuctionPartnersSection/AuctionPartnersSection';
-import FAQSection from '../FAQSection/FAQSection';
+import AuctionPartnersSection from './AuctionPartnersSection/AuctionPartnersSection';
+import FAQSection from './FAQSection/FAQSection';
 
 const HomePage: React.FC = () => {
   const { t } = useTranslation();

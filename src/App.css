@@ -1,9 +1,22 @@
+html {
+  min-width: 360px;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  overflow-x: hidden;
+}
+
 .App {
   text-align: center;
+  max-width: 1900px;
+  margin: 0 auto;
+  padding: 0 16px;
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 160px;
   pointer-events: none;
 }
 
@@ -20,7 +33,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: 1.5rem;
   color: white;
 }
 

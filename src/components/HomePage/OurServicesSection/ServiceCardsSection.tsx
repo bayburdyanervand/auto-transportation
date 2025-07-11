@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { ReactComponent as SafeIcon } from '@/assets/svg/safe-icon.svg';
 import { ReactComponent as FinanceIcon } from '@/assets/svg/finance-icon.svg';
 import { ReactComponent as CustomIcon } from '@/assets/svg/custom-icon.svg';
@@ -32,20 +33,28 @@ const cards = [
 ];
 
 const ServiceCardsSection: React.FC<Props> = ({ t }) => {
+
+  const navigate = useNavigate();
+
+  const handleClick = (index: number) => {
+    navigate(`/about#feature-${index + 1}`);
+  };
   return (
     <div className="our-services__cards-list">
       {cards.map((card, index) => (
-        <div key={index} 
-        className="our-services__card"
-        data-aos = 'fade-up'
-        data-aos-delay={index * 100}
+        <div key={index}
+          className="our-services__card"
+          data-aos='fade-up'
+          data-aos-delay={index * 100}
         >
           <div className="icon" style={{ backgroundColor: card.bg }}>
             {card.icon}
           </div>
           <h3>{t(card.titleKey)}</h3>
           <p>{t(card.textKey)}</p>
-          <a href="#">{t(card.linkKey)}</a>
+          <button onClick={() => handleClick(index)} className="our-services__card-link">
+            {t(card.linkKey)}
+          </button>
         </div>
       ))}
     </div>
