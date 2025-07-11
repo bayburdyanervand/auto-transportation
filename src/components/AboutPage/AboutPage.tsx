@@ -26,13 +26,16 @@ const AboutPage: React.FC = () => {
 
 
   return (
-    <main className="about-page">
+    <>
       <AboutBanner t={t} />
-      <AboutFeaturesSection />
-      <PartnersSection />
-      <ManagersSection t={t} />
-      <DeliverySection t={t}/>
-    </main>
+      <main className="about-page">
+        <AboutFeaturesSection />
+        <PartnersSection />
+        <ManagersSection t={t} />
+        <DeliverySection t={t} />
+      </main>
+    </>
+
   );
 };
 

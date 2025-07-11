@@ -254,6 +254,17 @@
             "partners.title": "Our Partners",
             "partners.description": "Cargo Polo's commitment to providing top-tier services is backed by strong and enduring partnerships with leading shipping companies.",
             "partners.logoAlt": "Partner"
+        },
+        "services": {
+            "banner": {
+                "title": "Services",
+                "description": "Cargo Polo offers comprehensive support throughout the vehicle purchase and delivery process to the pickup point. Our dealers benefit from a full package of services tailored to their individual needs.",
+                "ariaLabel": "Cargo Polo Services Section"
+            },
+            "scroller": {
+                "titlePrefix": "Purchasing vehicles through auction platforms.",
+                "description": "By becoming a Cargo Polo user, you gain access to vehicle purchases on various platforms. Registering as a dealer or experienced participant in the automotive market—whether an individual or legal entity—and processing at least 5 vehicles per month through our platform establishes a full partnership with us.\nAfter registering as our client, you will gain access to premium insurance products and dealer auctions, as well as an optimized billing system. You will have the opportunity to negotiate deals with dealers and purchase vehicles on leading platforms such as eBay, MachineryTrader, and others. You will also have access to a set of professional tools to thoroughly analyze and select equipment, ensuring informed and confident decisions before each purchase.\nUnderstanding that buying a vehicle is a multifaceted process involving various obligations and responsibilities, we offer its support through diverse and well-thought-out service packages. By sharing our experience and expert knowledge, we aim not only to simplify each step for you but also to foster the growth of your business, taking it to the next level."
+            }
         }
     }
 }

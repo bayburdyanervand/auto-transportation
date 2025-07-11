@@ -3,6 +3,7 @@ import ExperienceSelectionPage from '@pages/ExperienceSelectionPage/ExperienceSe
 import HomePage from '@/components/HomePage/HomePage';
 import PersonalInfoFormPage from '@pages/PersonalInfoFormPage/PersonalInfoFormPage';
 import AboutPage from '@/components/AboutPage/AboutPage';  
+import ServicesPage from './../../components/ServicesPage/ServicesPage';
 
 export const routes = [
   {
@@ -20,6 +21,10 @@ export const routes = [
   {
     path: '/about',  
     element: <AboutPage />
+  },
+  {
+    path: '/services',  
+    element: <ServicesPage />
   },
   {
     path: '*',

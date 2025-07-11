@@ -1,0 +1,106 @@
+.services-banner {
+  position: relative;
+  background: linear-gradient(
+    155deg,
+    rgba(237, 243, 245, 1) 0%,
+    rgba(195, 232, 205, 1) 69%,
+    rgba(237, 225, 175, 1) 100%
+  );
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 120px 1rem 2rem;
+
+  &__title {
+    font-family: "Tagesschrift-Regular", sans-serif;
+    font-size: 2.8rem;
+    color: #1a3c5e;
+    margin-bottom: 1rem;
+    z-index: 2;
+    position: relative;
+  }
+
+  &__description {
+    max-width: 700px;
+    font-family: "Tagesschrift-Regular", sans-serif;
+    font-size: 1.1rem;
+    color: #333;
+    z-index: 2;
+    position: relative;
+  }
+
+  // SVG layers
+  .icon-container {
+    position: absolute;
+    z-index: 1;
+
+    &.top-left {
+      top: 0;
+      left: 10%;
+      width: 100px;
+    }
+
+    &.bottom-left {
+      bottom: 0;
+      left: 0;
+      width: 150px;
+    }
+
+    &.truck {
+      bottom: 0px;
+      right: 400px;
+      width: 250px;
+    }
+
+    &.crane {
+      bottom: -40px;
+      right: 300px;
+      width: 280px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding-top: 80px;
+
+    &__title {
+      font-size: 2rem;
+    }
+
+    &__description {
+      font-size: 1rem;
+      padding: 0 1rem;
+    }
+
+    .icon-container {
+      &.top-left {
+        top: 0;
+        left: 5%;
+        width: 70px;
+      }
+
+      &.bottom-left {
+        bottom: 0;
+        left: 0;
+        width: 100px;
+      }
+
+      &.truck {
+        bottom: 0;
+        right: 20px;
+        width: 140px;
+      }
+
+      &.crane {
+        bottom: 0;
+        right: 0;
+        width: 140px;
+        display: block;
+      }
+    }
+  }
+  .icon-container {
+    transition: all 0.4s ease-in-out;
+  }
+}

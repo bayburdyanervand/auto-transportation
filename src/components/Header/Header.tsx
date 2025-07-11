@@ -73,7 +73,9 @@ export const Header: React.FC = () => {
             <button className={`nav-button ${currentPath === '/about' ? 'active' : ''}`} onClick={() => navigate('/about')}>
               {t('header.nav.about')}
             </button>
-            <button className="nav-button">{t('header.nav.services')}</button>
+            <button className={`nav-button ${currentPath === '/services' ? 'active' : ''}`} onClick={() => navigate('/services')}>
+              {t('header.nav.services')}
+            </button>
             <button className="nav-button">{t('header.nav.offers')}</button>
             <button className="nav-button">{t('header.nav.support')}</button>
           </nav>
@@ -126,9 +128,13 @@ export const Header: React.FC = () => {
             }}>
               {t('header.nav.about')}
             </button>
-            <button className="nav-button">{t('header.nav.services')}</button>
-            <button className="nav-button">{t('header.nav.offers')}</button>
-            <button className="nav-button">{t('header.nav.support')}</button>
+            <button className={`nav-button ${currentPath === '/services' ? 'active' : ''}`} onClick={() => {
+              setIsMenuOpen(false);
+              navigate('/services');
+            }}>{t('header.nav.services')}
+            </button>
+            {/* <button className="nav-button">{t('header.nav.offers')}</button>
+            <button className="nav-button">{t('header.nav.support')}</button> */}
           </nav>
 
           <div className="mobile-actions">

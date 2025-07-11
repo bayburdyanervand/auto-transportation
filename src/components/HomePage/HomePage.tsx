@@ -7,7 +7,7 @@ import LatestOffersSection from '@/components/HomePage/LatestOffersSection/Lates
 import DeliverySection from '@/components/DeliverySection/DeliverySection';
 import ManagersSection from '../ManagersSection/ManagersSection';
 import AuctionPartnersSection from './AuctionPartnersSection/AuctionPartnersSection';
-import FAQSection from './FAQSection/FAQSection';
+import FAQSection from '../FAQSection/FAQSection';
 
 const HomePage: React.FC = () => {
   const { t } = useTranslation();

@@ -2,10 +2,10 @@ import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import './AboutBanner.scss';
 
-import { ReactComponent as KontainerGreen } from '@/assets/svg/kontainer_green.svg';
-import { ReactComponent as KontainerYellow } from '@/assets/svg/kontainer_yellow.svg';
-import { ReactComponent as KontainerGrey } from '@/assets/svg/kontainer-grey.svg';
-import { ReactComponent as KontainerBlue } from '@/assets/svg/kontainer-blue.svg';
+import { ReactComponent as ContainerGreen } from '@/assets/svg/container_green.svg';
+import { ReactComponent as ContainerYellow } from '@/assets/svg/container_yellow.svg';
+import { ReactComponent as ContainerGrey } from '@/assets/svg/container-grey.svg';
+import { ReactComponent as ContainerBlue } from '@/assets/svg/container-blue.svg';
 import shipImage from '@/assets/images/ship.webp';
 
 
@@ -34,10 +34,10 @@ const AboutBanner: React.FC<AboutBannerProps> = ({ t, bannerData }) => {
     <section className="about-banner" aria-label={translate('about.banner.aboutBanner.ariaLabel')}>
       <div className="about-banner__container">
         <div className="about-banner__containers">
-          <KontainerGreen className={`container-item green ${drop ? 'drop-animation' : ''}`} />
-          <KontainerYellow className={`container-item yellow ${drop ? 'drop-animation' : ''}`} />
-          <KontainerGrey className="container-item grey" />
-          <KontainerBlue className="container-item blue" />
+          <ContainerGreen className={`container-item green ${drop ? 'drop-animation' : ''}`} />
+          <ContainerYellow className={`container-item yellow ${drop ? 'drop-animation' : ''}`} />
+          <ContainerGrey className="container-item grey" />
+          <ContainerBlue className="container-item blue" />
         </div>
 
         <div className="about-banner__wrapper">

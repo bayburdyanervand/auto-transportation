@@ -1,8 +1,8 @@
 import React from 'react';
 import './BannerSection.scss';
-import { ReactComponent as KontainerGreen } from '@/assets/svg/kontainer_green.svg';
-import { ReactComponent as KontainerYellow } from '@/assets/svg/kontainer_yellow.svg';
-import { ReactComponent as KontainerGroup } from '@/assets/svg/kontainer_group.svg';
+import { ReactComponent as ContainerGreen } from '@/assets/svg/container_green.svg';
+import { ReactComponent as ContainerYellow } from '@/assets/svg/container_yellow.svg';
+import { ReactComponent as ContainerGroup } from '@/assets/svg/container_group.svg';
 import { LoginModal } from '@/components/ui/LoginModal';
 import { useHomePageLogic } from '@/components/HomePage/useHomePageLogic';
 
@@ -36,11 +36,11 @@ const BannerSection: React.FC = () => {
 
         <div className="banner__images" ref={containerRef}>
           <div className="banner__top">
-            <KontainerGreen className="container-item green" />
-            <KontainerYellow className="container-item yellow" />
+            <ContainerGreen className="container-item green" />
+            <ContainerYellow className="container-item yellow" />
           </div>
           <div className="banner__bottom">
-            <KontainerGroup className="container-group" />
+            <ContainerGroup className="container-group" />
           </div>
         </div>
       </div>
