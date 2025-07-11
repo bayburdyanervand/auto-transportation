@@ -166,5 +166,44 @@
         "subtitle": "Premium service is created by a premium team. Cargo Polo is a team of qualified and experienced professionals. Our managers are always ready to share their expertise and provide competent assistance. In addition to client-facing managers, our team includes about 100 back-office specialists, including the Cargo Polo office in the USA. Together, they deliver top-notch service, the quality of which you experience from the very first interaction with our managers, ultimately ensuring a high level of customer service.",
         "requestCall": "Request a Call",
         "viewMore": "View More"
+    },
+    "auctions": {
+        "auctionPartners.title": "Our Auctions",
+        "auctionPartners.description": "Cargo Polo provides partner dealers with a unique advantage: access to a wide range of platforms for purchasing vehicles across America. For example, insurance auctions, dealer auctions, dealerships, car showrooms, and specialized platforms."
+    },
+    "faqsection": {
+        "faqsection.title": "Frequently Asked Questions",
+        "faqsection.items": {
+            "1": {
+                "question": "Who is a dealer? (Or what exactly does this term mean?)",
+                "answer": "A dealer is a physical or legal entity actively operating in the industry with proven experience in regularly purchasing a certain number of assets (3, 5, 10, 50, 100) monthly."
+            },
+            "2": {
+                "question": "Who is a shipper? (Or what exactly does this term mean?)",
+                "answer": "A shipper is a category of dealer who conducts large and regular purchases of assets and has access to special cooperation conditions provided by the company. In turn, the shipper takes on a number of functions typically performed by our side. It is critically important that the shipper ensures a sufficient volume of assets for efficient and complete container consolidation."
+            },
+            "3": {
+                "question": "Does a transport order include automatic insurance coverage for the cargo (specifically vehicles)?",
+                "answer": "Cargo insurance and carrier liability are two distinctly separate concepts. Without information about the value of the insured property, no company can assume responsibility or include the cargo's insurance valuation in the transportation cost. If you encounter such an offer, it is extremely important to understand that this is a complex issue requiring deep knowledge. (It is essential to clarify the extent of the carrier's liability under their insurance policy.) This question often leads to disputes between dealers and companies. This is because, at times, a company may compensate for losses directly caused by its errors, depending on how frequently damages occur. However, this does not constitute full cargo insurance. Misunderstanding this often puts dealers in an awkward position with clients due to excessive promises from some companies based on ambiguous agreements. Thus, the precise answer to this question is as follows: the carrier's liability in the transportation industry is indeed insured, but it covers only about 5% of total risks. This cannot be considered insurance in the full sense of the word."
+            },
+            "4": {
+                "question": "At what stage of our collaboration will I gain access to personal auction accounts?",
+                "answer": "You will be able to gain access to personal accounts immediately after the start of our collaboration, provided you meet the company's requirements for obtaining them."
+            }
+        }
+    },
+    "footer": {
+      "footer.location": "Location:",
+      "footer.address": "Tbilisi, Akaki Beliashvili St. 187",
+      "footer.phone": "Phone Number:",
+      "footer.phoneNumber": "+995 (032) 2 05 00 00",
+      "footer.email": "Email:",
+      "footer.emailAddress": "info@cargopolo.com",
+      "footer.sitemap": "Sitemap",
+      "footer.sitemapItems": ["Home", "About Us", "Services", "Calculator", "Offers", "Support"],
+      "footer.services": "SERVICES",
+      "footer.serviceItems": ["B2B", "Retail", "Auctions", "Offers", "Calculator"],
+      "footer.customerService": "Customer Service",
+      "footer.customerServiceItems": ["Warehouse Space", "Our Team", "Contacts", "Flexibility"]
     }
 }

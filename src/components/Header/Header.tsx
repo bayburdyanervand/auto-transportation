@@ -1,7 +1,7 @@
 // src/components/Header/Header.tsx
 import React from 'react';
 import './Header.scss';
-import logoUrl from '@/assets/images/logo.jpg';
+import logoUrl from '@/assets/images/logo.png';
 import { LoginModal } from '@components/ui/LoginModal';
 import { useHeaderLogic } from './useHeaderLogic';
 

@@ -7,14 +7,14 @@ import PersonalInfoFormPage from '@pages/PersonalInfoFormPage/PersonalInfoFormPa
 export const routes = [
   {
     path: '/experience',
-    element: <ExperienceSelectionPage/>
+    element: <ExperienceSelectionPage />
   },
   {
-    path: '/containers',
+    path: '/',
     element: <HomePage />
   },
   {
-    path: '*',  
+    path: '*',
     element: <HomePage />
   },
   {

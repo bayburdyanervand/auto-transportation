@@ -6,6 +6,8 @@ import CalculatorSection from '@/components/CalculatorSection/CalculatorSection'
 import LatestOffersSection from '@/components/LatestOffersSection/LatestOffersSection';
 import DeliverySection from '@/components/DeliverySection/DeliverySection';
 import ManagersSection from '../ManagersSection/ManagersSection';
+import AuctionPartnersSection from '../AuctionPartnersSection/AuctionPartnersSection';
+import FAQSection from '../FAQSection/FAQSection';
 
 const HomePage: React.FC = () => {
   const { t } = useTranslation();
@@ -17,7 +19,9 @@ const HomePage: React.FC = () => {
         <CalculatorSection t={t} />
         <LatestOffersSection t={t} />
         <DeliverySection t={t} />
-        <ManagersSection t={t}   />
+        <ManagersSection t={t} />
+        <AuctionPartnersSection t={t} />
+        <FAQSection t={t} />
       </main>
     </>
   );

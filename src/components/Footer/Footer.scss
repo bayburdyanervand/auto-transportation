@@ -1,0 +1,64 @@
+.footer {
+  background-color: #f8f8f8;
+  padding: 3rem 1rem;
+  font-size: 0.9rem;
+  color: #333;
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  &__column {
+    display: flex;
+    flex-direction: column;
+
+    h4 {
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: #111;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+
+      li {
+        margin-bottom: 0.5rem;
+        color: #555;
+        cursor: pointer;
+
+        &:hover {
+          color: #28a745;
+        }
+      }
+    }
+
+    p {
+      margin: 0.25rem 0;
+    }
+  }
+
+  &__logo {
+    width: 50px;
+    margin-bottom: 1rem;
+  }
+
+  &__socials {
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+
+    a {
+      font-size: 1.2rem;
+      color: #333;
+
+      &:hover {
+        color: #28a745;
+      }
+    }
+  }
+}
