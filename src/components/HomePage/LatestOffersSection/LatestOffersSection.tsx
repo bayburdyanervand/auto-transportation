@@ -6,6 +6,7 @@ import { TFunction } from 'react-i18next';
 import offer1 from '@/assets/images/ofers/ofer-1.png';
 import offer2 from '@/assets/images/ofers/ofer-2.png';
 import offer3 from '@/assets/images/ofers/ofer-3.png';
+import OfferCard from '@/components/shared/OfferCard/OfferCard';
 
 interface Offer {
   id: number;
@@ -19,7 +20,7 @@ interface Offer {
 
 const LatestOffersSection = ({ t }: { t: TFunction<'translation', undefined> }) => {
   const offers: Offer[] = t('latestOffers.offers', { returnObjects: true }) as Offer[];
-
+  const images = [offer1, offer2, offer3];
   return (
     <section className="latest-offers">
       <h2 className="latest-offers__title" data-aos="fade-up">
@@ -31,18 +32,16 @@ const LatestOffersSection = ({ t }: { t: TFunction<'translation', undefined> }) 
 
       <div className="latest-offers__cards">
         {offers.map((offer: Offer, index: number) => (
-          <div className="latest-offers__card" key={offer.id} data-aos="fade-up" data-aos-delay={200 + index * 100}>
-            <div className="latest-offers__image">
-              <img src={[offer1, offer2, offer3][index]} alt={offer.title} />
-              <div className="latest-offers__tag">{offer.tag}</div>
-            </div>
-            <div className="latest-offers__info">
-              <small>{offer.date}</small>
-              <h3>{offer.title}</h3>
-              <p>{offer.description}</p>
-              <a href={offer.linkText}>{offer.linkText}</a>
-            </div>
-          </div>
+          <OfferCard
+            image={images[index]}
+            title={offer.title}
+            description={offer.description}
+            date={offer.date}
+            tag={offer.tag}
+            linkText={offer.linkText}
+            aosDelay={index * 100}
+            key={offer.id}
+          />
         ))}
       </div>
       <button className={'latest-offers__show-more'}>{t('latestOffers.button')}</button>

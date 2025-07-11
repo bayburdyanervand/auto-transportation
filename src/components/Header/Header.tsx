@@ -76,7 +76,9 @@ export const Header: React.FC = () => {
             <button className={`nav-button ${currentPath === '/services' ? 'active' : ''}`} onClick={() => navigate('/services')}>
               {t('header.nav.services')}
             </button>
-            <button className="nav-button">{t('header.nav.offers')}</button>
+            <button className={`nav-button ${currentPath === '/offers' ? 'active' : ''}`} onClick={() => navigate('/offers')}>
+              {t('header.nav.offers')}
+            </button>
             <button className="nav-button">{t('header.nav.support')}</button>
           </nav>
         )}
@@ -133,8 +135,12 @@ export const Header: React.FC = () => {
               navigate('/services');
             }}>{t('header.nav.services')}
             </button>
-            {/* <button className="nav-button">{t('header.nav.offers')}</button>
-            <button className="nav-button">{t('header.nav.support')}</button> */}
+            <button className={`nav-button ${currentPath === '/offers' ? 'active' : ''}`} onClick={() => {
+              setIsMenuOpen(false);
+              navigate('/offers');
+            }}>{t('header.nav.offers')}
+            </button>
+            <button className="nav-button">{t('header.nav.support')}</button> 
           </nav>
 
           <div className="mobile-actions">

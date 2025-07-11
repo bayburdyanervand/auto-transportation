@@ -4,6 +4,7 @@ import HomePage from '@/components/HomePage/HomePage';
 import PersonalInfoFormPage from '@pages/PersonalInfoFormPage/PersonalInfoFormPage';
 import AboutPage from '@/components/AboutPage/AboutPage';  
 import ServicesPage from './../../components/ServicesPage/ServicesPage';
+import OffersPage from '@/components/OfferPage/OfferPage';
 
 export const routes = [
   {
@@ -29,5 +30,9 @@ export const routes = [
   {
     path: '*',
     element: <HomePage />
-  }
+  },
+  {
+  path: '/offers',
+  element: <OffersPage />,
+}
 ];
