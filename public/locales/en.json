@@ -268,8 +268,54 @@
         }
     },
     "offers": {
-        "title": "Offers and Articles",
-        "description": "Here you will find unparalleled offers on delivery services for your cargo, as well as a carefully curated collection of articles on topics such as logistics, dealership, and the latest trends in the industry.",
-        "ariaLabel": "Offers and Articles Section"
+        "title": "Предложения и статьи",
+        "description": "Здесь вы найдете непревзойденные предложения...",
+        "ariaLabel": "Секция предложений и статей",
+        "link": "Посмотреть подробности",
+        "1": {
+            "id": 1,
+            "title": "Рекомендации по развитию бизнеса автосалона",
+            "description": "If you are a car dealer and want your business to grow, it is crucial to analyze current market trends and seize new opportunities. Here are some essential tips that, if...",
+            "fullDescription": "1. Leverage Your Geographical Advantage and Expand Regionally – For car dealers based in Georgia, expanding exports to markets in Armenia, Azerbaijan, and Central Asia presents great potential. According to 2024 data, car imports to Kazakhstan and Uzbekistan increased by 20%, signaling growing demand in these regions. Armenia and Azerbaijan have experienced a steady rise in imports over the past decades, which creates new opportunities for the local car market. In such conditions, it's important to strengthen your partnership network and optimize logistics processes, giving you, as a dealer based in Georgia, a competitive edge and increasing your chances of success in these markets. \n 2. Choose the Right Auction Platform – Select an auction platform that aligns with your business model and goals. If your main focus is car repair, platforms like Copart and IAAI are ideal. However, if you’re aiming to sell restored cars or new vehicles, platforms like Manheim, Pipeline, and ADESA would be more suitable. \n 3. Utilize Data for Better Sales – Analyzing consumer behavior will help you predict which cars will be in demand in a specific market, determine the most effective pricing strategies, identify market trends, and uncover hidden opportunities. For instance, in 2023, Georgia earned $940 million in revenue from the re-export of used cars, highlighting the importance of market data. By utilizing such data, you can more effectively tailor your offerings to meet market demand. Leverage all available data and statistical insights, track trends, and create an actionable plan based on this information. \n "
+        },
+        "2": {
+            "id": 2,
+            "title": "Преимущества партнерства с Cargo Polo",
+            "description": "Почему дилеры выбирают нас как надёжного логистического партнёра...",
+            "fullDescription": "Наши услуги охватывают полный цикл доставки, от закупки до таможенного оформления..."
+        },
+        "3": {
+            "id": 3,
+            "title": "Наша служба поддержки",
+            "description": "Узнайте, как наша команда помогает клиентам на каждом этапе...",
+            "fullDescription": "Служба поддержки Cargo Polo состоит из профессионалов..."
+        },
+        "4": {
+            "id": 4,
+            "title": "Наша служба поддержки",
+            "description": "Узнайте, как наша команда помогает клиентам на каждом этапе...",
+            "fullDescription": "Служба поддержки Cargo Polo состоит из профессионалов..."
+        },
+        "5": {
+            "id": 5,
+            "title": "Наша служба поддержки",
+            "description": "Узнайте, как наша команда помогает клиентам на каждом этапе...",
+            "fullDescription": "Служба поддержки Cargo Polo состоит из профессионалов..."
+        },
+        "6": {
+            "id": 6,
+            "title": "Наша служба поддержки",
+            "description": "Узнайте, как наша команда помогает клиентам на каждом этапе...",
+            "fullDescription": "Служба поддержки Cargo Polo состоит из профессионалов..."
+        }
+    },
+    "support": {
+        "title": "Служба поддержки клиентов",
+        "line1": "Техническая поддержка всегда готова найти решения для ваших нестандартных вопросов.",
+        "line2": "Наш сервис основывается на многолетнем опыте и ориентирован на комфорт дилеров.",
+        "line3": "Клиенты оперативно получают ответы на интересующие вопросы в течение 1–3 минут.",
+        "line4": "Накопленный опыт в сфере дилерских услуг способствует профессиональному росту нашей команды...",
+        "line5": "Команда нашей компании насчитывает множество специалистов и менеджеров, которые напрямую общаются с дилерами...",
+        "line6": "Они всегда на связи с внутренними отделами, складами и диспетчерами, формируя эффективную цепочку..."
     }
 }

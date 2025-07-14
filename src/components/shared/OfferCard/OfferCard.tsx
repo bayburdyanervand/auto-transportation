@@ -3,6 +3,7 @@ import React from 'react';
 import './OfferCard.scss';
 
 interface OfferCardProps {
+  id?: number;
   image: string;
   title: string;
   description: string;
@@ -13,6 +14,7 @@ interface OfferCardProps {
 }
 
 const OfferCard: React.FC<OfferCardProps> = ({
+  id,
   image,
   title,
   description,
@@ -31,7 +33,9 @@ const OfferCard: React.FC<OfferCardProps> = ({
         <small>{date}</small>
         <h3>{title}</h3>
         <p>{description}</p>
-        <a href="#">{linkText}</a>
+        <a href={`/offers/${id}`} className="offer-card__link">
+          {linkText}
+        </a>
       </div>
     </div>
   );

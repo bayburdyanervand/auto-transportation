@@ -1,0 +1,21 @@
+.support-page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 100px 1rem 3rem;
+  text-align: center;
+
+  &__title {
+    font-size: 2.5rem;
+    font-family: 'Tagesschrift-Regular', sans-serif;
+    margin-bottom: 2rem;
+    color: #1a3c5e;
+  }
+
+  &__text p {
+    font-size: 1rem;
+    color: #444;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    font-family: 'Tagesschrift-Regular', sans-serif;
+  }
+}

@@ -1,0 +1,59 @@
+.offer-detail {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 3rem 1rem;
+  font-family: 'Tagesschrift-Regular', sans-serif;
+
+  &__image {
+    width: 100%;
+    max-height: 450px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  &__content {
+    small {
+      color: #888;
+      font-size: 0.9rem;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    h1 {
+      font-size: 2rem;
+      color: #1a3c5e;
+      margin-bottom: 1.5rem;
+    }
+
+    p {
+      color: #444;
+      font-size: 1rem;
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 2rem 1rem;
+
+    &__image {
+      max-height: 300px;
+    }
+
+    &__content {
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      p {
+        font-size: 0.95rem;
+      }
+    }
+  }
+}

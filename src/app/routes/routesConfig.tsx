@@ -2,9 +2,11 @@ import React from 'react';
 import ExperienceSelectionPage from '@pages/ExperienceSelectionPage/ExperienceSelectionPage';
 import HomePage from '@/components/HomePage/HomePage';
 import PersonalInfoFormPage from '@pages/PersonalInfoFormPage/PersonalInfoFormPage';
-import AboutPage from '@/components/AboutPage/AboutPage';  
+import AboutPage from '@/components/AboutPage/AboutPage';
 import ServicesPage from './../../components/ServicesPage/ServicesPage';
 import OffersPage from '@/components/OfferPage/OfferPage';
+import OfferDetailPage from '@/pages/OfferDetailPage/OfferDetailPage';
+import SupportPage from '@/components/SupportPage/SupportPage';
 
 export const routes = [
   {
@@ -20,11 +22,11 @@ export const routes = [
     element: <PersonalInfoFormPage />
   },
   {
-    path: '/about',  
+    path: '/about',
     element: <AboutPage />
   },
   {
-    path: '/services',  
+    path: '/services',
     element: <ServicesPage />
   },
   {
@@ -32,7 +34,15 @@ export const routes = [
     element: <HomePage />
   },
   {
-  path: '/offers',
-  element: <OffersPage />,
+    path: '/offers',
+    element: <OffersPage />,
+  },
+   {
+    path: '/offers/:id',
+    element: <OfferDetailPage />
+  },
+  {
+  path: '/support',
+  element: <SupportPage />
 }
 ];
