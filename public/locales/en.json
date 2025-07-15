@@ -70,7 +70,10 @@
                 "консолидация": "Consolidation"
             }
         },
-        "submit": "Submit"
+        "submit": "Submit",
+        "submitting": "Submitting...",
+        "error": "Error: {{message}}",
+        "success": "Registration successful!"
     },
     "containersBlock": {
         "title": "Full Range",

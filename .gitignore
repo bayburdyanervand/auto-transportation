@@ -48,3 +48,5 @@ yarn-error.log*
 .cache/
 .pnpm/
 .pnp.*
+
+yarn.lock

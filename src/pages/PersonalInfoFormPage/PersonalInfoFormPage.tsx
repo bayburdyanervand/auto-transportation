@@ -1,9 +1,12 @@
+// PersonalInfoFormPage.tsx
 import React from 'react';
 import './PersonalInfoFormPage.scss';
 import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
 import { useTranslation } from 'react-i18next';
 import { usePersonalInfoForm } from './usePersonalInfoForm';
+import { useModal } from '@/context/ModalContext';
+import GlobalModal from '@/components/ui/GlobalModal/GlobalModal';
 
 const PersonalInfoFormPage: React.FC = () => {
   const { t } = useTranslation();
@@ -20,7 +23,11 @@ const PersonalInfoFormPage: React.FC = () => {
     toggleService,
     handleSubmit,
     serviceOptions,
+    isLoading,
+    isError,
+    error,
   } = usePersonalInfoForm();
+  const { isOpen, hideModal, message, type } = useModal();
 
   return (
     <div className="personal-info-page">
@@ -66,8 +73,9 @@ const PersonalInfoFormPage: React.FC = () => {
         <div className="services">
           <p className="services__title">{t('personalInfoForm.services.title')}</p>
           <div className="services__grid">
-            {serviceOptions.map(option => {
-              const key = option.toLowerCase()
+            {serviceOptions.map((option) => {
+              const key = option
+                .toLowerCase()
                 .replace(/ /g, '_')
                 .replace(/-/g, '_')
                 .replace(/\//g, '_');
@@ -86,10 +94,24 @@ const PersonalInfoFormPage: React.FC = () => {
           </div>
         </div>
 
-        <button type="submit" className="submit-btn">
-          {t('personalInfoForm.submit')}
+        <button type="submit" className="submit-btn" disabled={isLoading}>
+          {isLoading ? t('personalInfoForm.submitting') : t('personalInfoForm.submit')}
         </button>
+
+        {isError && (
+          <p className="error-message" style={{ color: 'red' }}>
+            {t('personalInfoForm.error', { message: error?.toString() })}
+          </p>
+        )}
       </form>
+
+      <GlobalModal
+        message={message || ''}
+        type={type || 'success'}
+        onClose={hideModal}
+        isOpen={isOpen}
+        duration={5000}
+      />
     </div>
   );
 };
