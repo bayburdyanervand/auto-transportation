@@ -89,7 +89,7 @@ export const Header: React.FC = () => {
           <button className="action-button login" onClick={handleModalToggle}>
             <span className="icon">👤</span> {t('header.actions.login')}
           </button>
-          <button className="action-button primary">{t('header.actions.applyNow')}</button>
+          <button className="action-button primary" onClick={() => navigate('/experience')}>{t('header.actions.applyNow')}</button>
 
           <div className="language-selector" onClick={handleLanguageToggle}>
             <span className="globe">🌐</span>
