@@ -9,6 +9,7 @@
         },
         "actions": {
             "login": "Login",
+            "logout": "Logout",
             "applyNow": "Apply Now",
             "languages": {
                 "ru": "Russian",

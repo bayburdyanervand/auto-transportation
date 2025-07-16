@@ -1,6 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { Header } from '@components/Header';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { AppRouter } from './app/index';
 import './App.css';
 import MainLayout from './components/layouts/MainLayout/MainLayout';
@@ -11,12 +12,20 @@ function App() {
 
   return (
     <div className="App">
-      {/* <Header /> */}
       <ModalProvider>
         <MainLayout>
           <AppRouter />
         </MainLayout>
       </ModalProvider>
+      <ToastContainer
+        position="top-center"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop
+        closeOnClick
+        pauseOnHover
+        theme="colored"
+      />
     </div >
   );
 }

@@ -9,6 +9,7 @@
         },
         "actions": {
             "login": "შესვლა",
+            "logout": "გასვლა",
             "applyNow": "განაცხადის გაკეთება",
             "languages": {
                 "ru": "რუსული",

@@ -17,7 +17,6 @@ interface ServicesScrollerSectionProps {
 const ServicesScrollerSection: React.FC<ServicesScrollerSectionProps> = ({ t, services: backendServices }) => {
   const { t: translate } = useTranslation(); 
   const fallbackTranslate = t || ((key: string) => {
-    console.warn(`Translation not found for key: ${key}`);
     return key; 
   });
 

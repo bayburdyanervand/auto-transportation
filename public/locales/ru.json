@@ -9,6 +9,7 @@
         },
         "actions": {
             "login": "Войти",
+             "logout": "Выйти",
             "applyNow": "Подать заявку сейчас",
             "languages": {
                 "ru": "Русский",

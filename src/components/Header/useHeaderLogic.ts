@@ -1,17 +1,21 @@
 import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
+import { RootState } from '@/store';
+import { logout } from '@/features/auth/slice';
 
 export const useHeaderLogic = () => {
   const { t, i18n } = useTranslation();
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
+  const token = useSelector((state: RootState) => state.auth.token);
   const [isSearchFocused, setIsSearchFocused] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isLanguageOpen, setIsLanguageOpen] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [vin, setVin] = useState('');
-
 
   const languages = [
     { code: 'ru', label: t('header.actions.languages.ru') },
@@ -27,11 +31,16 @@ export const useHeaderLogic = () => {
 
   const handleLanguageSelect = (code: string) => {
     i18n.changeLanguage(code);
-    setIsLanguageOpen(false);  
+    setIsLanguageOpen(false);
   };
 
   const handleModalToggle = () => {
     setIsModalOpen((prev) => !prev);
+  };
+
+  const handleLogout = () => {
+    dispatch(logout());
+    setIsMenuOpen(false);  
   };
 
   useEffect(() => {
@@ -47,19 +56,21 @@ export const useHeaderLogic = () => {
 
   return {
     t,
-    isSearchFocused,
-    isMenuOpen,
-    isLanguageOpen,
-    languages,
-    currentLanguageCode,
-    isModalOpen,
+    token,
     vin,
     navigate,
-    setIsSearchFocused,
-    setIsMenuOpen,
+    isMenuOpen,
+    isSearchFocused,
+    isLanguageOpen,
+    isModalOpen,
+    languages,
+    currentLanguageCode,
+    handleLogout,
     handleLanguageToggle,
     handleLanguageSelect,
     handleModalToggle,
+    setIsMenuOpen,
+    setIsSearchFocused,
     setVin,
   };
 };

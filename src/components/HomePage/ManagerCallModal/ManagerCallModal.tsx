@@ -1,4 +1,3 @@
-// ManagerCallModal.tsx
 import React, { Fragment } from 'react';
 import { Dialog, Transition } from '@headlessui/react';
 import PhoneInput from 'react-phone-input-2';
@@ -10,16 +9,23 @@ interface ManagerCallModalProps {
   isOpen: boolean;
   onClose: () => void;
   managerImage: string;
+  managerId: number;
 }
 
-const ManagerCallModal: React.FC<ManagerCallModalProps> = ({ isOpen, onClose, managerImage }) => {
+const ManagerCallModal: React.FC<ManagerCallModalProps> = ({
+  isOpen,
+  onClose,
+  managerImage,
+  managerId,
+}) => {
   const {
     formData,
     errors,
     handleChange,
     handlePhoneChange,
     handleSubmit,
-  } = useManagerCallForm(onClose);
+    isLoading,
+  } = useManagerCallForm(onClose, managerId);
 
   return (
     <Transition appear show={isOpen} as={Fragment}>
@@ -47,12 +53,12 @@ const ManagerCallModal: React.FC<ManagerCallModalProps> = ({ isOpen, onClose, ma
                 value={formData.phone}
                 onChange={handlePhoneChange}
                 inputClass={`${errors.phone ? 'error-input' : ''} manager-call-modal__phone-input`}
-                inputStyle={{ width: '100%', paddingLeft:'20%' }}
+                inputStyle={{ width: '100%', paddingLeft: '20%' }}
                 buttonStyle={{
                   borderTopLeftRadius: '6px',
                   borderBottomLeftRadius: '6px',
-                  height:'2.2rem',
-                  backgroundColor:'white'
+                  height: '2.2rem',
+                  backgroundColor: 'white',
                 }}
               />
 
@@ -78,8 +84,8 @@ const ManagerCallModal: React.FC<ManagerCallModalProps> = ({ isOpen, onClose, ma
                 <button type="button" onClick={onClose}>
                   Закрыть
                 </button>
-                <button type="submit" className="submit">
-                  Запросить звонок
+                <button type="submit" className="submit" disabled={isLoading}>
+                  {isLoading ? 'Отправка...' : 'Запросить звонок'}
                 </button>
               </div>
               {Object.values(errors).some(Boolean) && (

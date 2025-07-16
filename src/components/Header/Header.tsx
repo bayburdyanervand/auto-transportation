@@ -23,6 +23,8 @@ export const Header: React.FC = () => {
     setIsSearchFocused,
     setIsMenuOpen,
     handleModalToggle,
+    handleLogout,
+    token, // <- добавлено
   } = useHeaderLogic();
 
   const location = useLocation();
@@ -86,10 +88,19 @@ export const Header: React.FC = () => {
         )}
 
         <div className="header__actions">
-          <button className="action-button login" onClick={handleModalToggle}>
-            <span className="icon">👤</span> {t('header.actions.login')}
+          {token ? (
+            <button className="action-button login" onClick={handleLogout}>
+              <span className="icon">🚪</span> {t('header.actions.logout') || 'Выйти'}
+            </button>
+          ) : (
+            <button className="action-button login" onClick={handleModalToggle}>
+              <span className="icon">👤</span> {t('header.actions.login')}
+            </button>
+          )}
+
+          <button className="action-button primary" onClick={() => navigate('/experience')}>
+            {t('header.actions.applyNow')}
           </button>
-          <button className="action-button primary" onClick={() => navigate('/experience')}>{t('header.actions.applyNow')}</button>
 
           <div className="language-selector" onClick={handleLanguageToggle}>
             <span className="globe">🌐</span>
@@ -150,9 +161,15 @@ export const Header: React.FC = () => {
           </nav>
 
           <div className="mobile-actions">
-            <button className="action-button login" onClick={handleModalToggle}>
-              {t('header.actions.login')}
-            </button>
+            {token ? (
+              <button className="action-button login" onClick={handleLogout}>
+                {t('header.actions.logout') || 'Выйти'}
+              </button>
+            ) : (
+              <button className="action-button login" onClick={handleModalToggle}>
+                {t('header.actions.login')}
+              </button>
+            )}
             <button className="action-button primary">{t('header.actions.applyNow')}</button>
             <div className="language-selector" onClick={handleLanguageToggle}>
               🌐 {currentLanguageCode} ▾

@@ -1,32 +1,23 @@
-// features/auth/api.ts
 import { api } from '../../services/api';
-import { LoginRequest, AuthResponse } from './types';
-import { EndpointBuilder } from '@reduxjs/toolkit/query';
-
-export interface UserData {
-  fullName: string;
-  email: string;
-  city: string;
-  phone: string;
-  services: string[];
-  experienceLevel: string;
-}
-
-export interface RegisterResponse {
-  message: string;
-}
+import {
+  AuthRequest,
+  AuthResponse,
+  RegisterRequest,
+  RegisterResponse,
+} from './types';
+import { EndpointBuilder } from '@reduxjs/toolkit/query/react';
 
 export const authApi = api.injectEndpoints({
   endpoints: (builder: EndpointBuilder<any, any, any>) => ({
-    login: builder.mutation<AuthResponse, LoginRequest>({
-      query: (body: LoginRequest) => ({
+    authorize: builder.mutation<AuthResponse, AuthRequest>({
+      query: (body) => ({
         url: '/api/auth/login',
         method: 'POST',
         body,
       }),
     }),
-    registerUser: builder.mutation<RegisterResponse, UserData>({
-      query: (body: UserData) => ({
+    registerUser: builder.mutation<RegisterResponse, RegisterRequest>({
+      query: (body) => ({
         url: '/api/auth/register',
         method: 'POST',
         body,
@@ -35,4 +26,4 @@ export const authApi = api.injectEndpoints({
   }),
 });
 
-export const { useLoginMutation, useRegisterUserMutation } = authApi;
+export const { useAuthorizeMutation, useRegisterUserMutation } = authApi;
