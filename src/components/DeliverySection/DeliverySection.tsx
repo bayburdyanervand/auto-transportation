@@ -8,9 +8,10 @@ const DeliverySection = ({ t }: { t: any }) => {
 
     return (
         <section className="delivery-section">
-            <main className={'delivery-section__content'}>
+            <main className="delivery-section__content">
                 <h2 className="delivery-section__title">{t('deliverySection.title')}</h2>
                 <p className="delivery-section__subtitle">{t('deliverySection.subtitle')}</p>
+
                 <div className="delivery-section__switch">
                     <div className="delivery-section__switch-container">
                         <button
@@ -28,9 +29,20 @@ const DeliverySection = ({ t }: { t: any }) => {
                         <div className={`delivery-section__slider ${activeTab === 'from' ? 'left' : 'right'}`} />
                     </div>
                 </div>
+
                 <div className="delivery-section__map">
-                    <img src={activeTab === 'from' ? deliveryFrom : deliveryTo} alt={t('deliverySection.mapAlt')} />
+                    <img
+                        src={deliveryFrom}
+                        alt={t('deliverySection.mapAlt')}
+                        className={activeTab === 'from' ? 'visible' : ''}
+                    />
+                    <img
+                        src={deliveryTo}
+                        alt={t('deliverySection.mapAlt')}
+                        className={activeTab === 'to' ? 'visible' : ''}
+                    />
                 </div>
+
                 <div className="delivery-section__descriptions">
                     <div className="delivery-section__text delivery-section__text--left">
                         <h4>{t('deliverySection.usSection.title')}</h4>
