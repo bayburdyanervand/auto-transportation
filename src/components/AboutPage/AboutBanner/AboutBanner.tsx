@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { useTranslation } from 'react-i18next';
 import './AboutBanner.scss';
 
 import { ReactComponent as ContainerGreen } from '@/assets/svg/container_green.svg';

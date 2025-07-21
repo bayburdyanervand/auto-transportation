@@ -121,11 +121,22 @@
     cursor: pointer;
     font-size: 0.8rem;
     transition: color 0.3s;
+    position: relative;
 
     &.active {
       color: #28a745;
       font-weight: bold;
-      border-bottom: 2px solid #28a745;
+      border-bottom: none;
+
+      &::after {
+        content: '';
+      position: absolute;
+      bottom: 0;
+      left: 25%;
+      width: 50%;
+      height: 1px;  
+      background-color: #28a745;
+      }
     }
 
     &:hover {

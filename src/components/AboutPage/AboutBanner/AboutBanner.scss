@@ -145,13 +145,12 @@
     }
 
     &__image-wrapper {
-      position: static;
-      transform: none;
-      width: 90%;
+      position: static;  
+      transform: none;  
+      width: 90%;  
       height: auto;
-      max-width: 500px;
-      margin-top: 1rem;
-      margin-bottom: 2rem;
+      max-width: 500px; 
+      margin: 1rem auto 2rem;  
       pointer-events: auto;
 
       .about-banner__image {
