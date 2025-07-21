@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom'
 import CargoImage from '@/assets/images/ship.webp';
 import { ReactComponent as ShipIcon } from '@/assets/svg/ship.svg';
 import { ReactComponent as CarIcon } from '@/assets/svg/car.svg';
@@ -8,6 +9,7 @@ interface Props {
 }
 
 const ServiceOverviewSection: React.FC<Props> = ({ t }) => {
+  const navigate = useNavigate()
   const descriptionLines = t('ourservices.overview.description', { returnObjects: true }) as string[];
 
 
@@ -26,7 +28,7 @@ const ServiceOverviewSection: React.FC<Props> = ({ t }) => {
           </p>
         ))}
 
-        <button data-aos="fade-up" data-aos-delay={descriptionLines.length * 100}>
+        <button data-aos="fade-up" data-aos-delay={descriptionLines.length * 100} onClick={() => navigate('/services')} >
           {t('ourservices.overview.button')}
         </button>
       </div>

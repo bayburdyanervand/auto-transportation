@@ -7,8 +7,6 @@ import PartnersSection from './PartnersSection/PartnersSection';
 import ManagersSection from '../ManagersSection/ManagersSection';
 import DeliverySection from '../DeliverySection/DeliverySection';
 
-
-
 const AboutPage: React.FC = () => {
   const { t } = useTranslation();
 
@@ -18,12 +16,16 @@ const AboutPage: React.FC = () => {
       const el = document.querySelector(hash);
       if (el) {
         setTimeout(() => {
-          el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          const headerHeight = 100;  
+          const elementPosition = el.getBoundingClientRect().top + window.scrollY;
+          window.scrollTo({
+            top: elementPosition - headerHeight,
+            behavior: 'smooth',
+          });
         }, 300);
       }
     }
   }, []);
-
 
   return (
     <>
@@ -35,7 +37,6 @@ const AboutPage: React.FC = () => {
         <DeliverySection t={t} />
       </main>
     </>
-
   );
 };
 

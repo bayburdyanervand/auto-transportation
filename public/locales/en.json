@@ -184,7 +184,8 @@
         "auctionPartners.description": "Cargo Polo provides partner dealers with a unique advantage: access to a wide range of platforms for purchasing vehicles across America. For example, insurance auctions, dealer auctions, dealerships, car showrooms, and specialized platforms."
     },
     "faqsection": {
-        "faqsection.title": "Frequently Asked Questions",
+        "title": "Frequently Asked Questions",
+        "subtitle":"Find answers to the most frequently asked questions and use our experience as a reliable resource on the path to your success",
         "faqsection.items": {
             "1": {
                 "question": "Who is a dealer? (Or what exactly does this term mean?)",
@@ -212,6 +213,7 @@
         "footer.email": "Email:",
         "footer.emailAddress": "info@cargopolo.com",
         "footer.sitemap": "Sitemap",
+        "customerService":"Customer service",
         "footer.sitemapItems": [
             "Home",
             "About Us",

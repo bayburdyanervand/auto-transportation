@@ -16,6 +16,7 @@
 
   &__logo {
     margin-right: 2rem;
+    cursor: pointer;
 
     .logo {
       height: 40px;
@@ -37,6 +38,11 @@
       background-color: #fff;
       border: 1px solid #007bff;
       width: 400px;
+      ~ .header__right .header__nav {
+        opacity: 0;
+        height: 0;
+        overflow: hidden;
+      }
     }
 
     .vin-search__icon {
@@ -83,6 +89,9 @@
   &__nav {
     display: flex;
     margin-right: 2rem;
+    opacity: 1;
+    height: auto;
+    transition: opacity 0.3s ease, height 0.3s ease;
 
     .nav-button {
       background: none;
@@ -173,7 +182,7 @@
       margin-right: 0.25rem;
     }
 
-    .languageCode{
+    .languageCode {
       font-size: 0.7rem;
     }
 

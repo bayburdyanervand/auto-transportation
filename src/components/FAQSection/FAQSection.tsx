@@ -28,9 +28,9 @@ const FAQSection: React.FC<FAQSectionProps> = ({ t, faqs: backendFaqs }) => {
 
   return (
     <section className="faq-section">
-      <h2 className="faq-section__title">{t('faqsection.faqsection.title')}</h2>
+      <h2 className="faq-section__title">{t('faqsection.title')}</h2>
       <p className="faq-section__subtitle">
-        {t('faqsection.faqsection.subtitle')}
+        {t('faqsection.subtitle')}
       </p>
       <div className="faq-section__list">
         {faqList.map(faq => (

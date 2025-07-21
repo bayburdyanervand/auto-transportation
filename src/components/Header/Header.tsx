@@ -24,7 +24,7 @@ export const Header: React.FC = () => {
     setIsMenuOpen,
     handleModalToggle,
     handleLogout,
-    token,  
+    token,
   } = useHeaderLogic();
 
   const location = useLocation();
@@ -33,8 +33,8 @@ export const Header: React.FC = () => {
   return (
     <header className="header">
       <div className="header__left">
-        <div className="header__logo">
-          <img src={logoUrl} alt="logo" className="logo" />
+        <div className="header__logo" >
+          <img src={logoUrl} alt="logo" className="logo" onClick={()  => navigate('/')}/>
         </div>
 
         <div className={`header__vin-search ${isSearchFocused ? 'focused' : ''}`}>
@@ -58,6 +58,8 @@ export const Header: React.FC = () => {
                 e.preventDefault();
                 setVin('');
                 setIsSearchFocused(false);
+                const input = document.querySelector('.vin-search__input') as HTMLInputElement;
+                if (input) input.blur();
               }}
             >
               {t('header.cancel')}
@@ -104,7 +106,7 @@ export const Header: React.FC = () => {
 
           <div className="language-selector" onClick={handleLanguageToggle}>
             <span className="globe">🌐</span>
-            <span className = "languageCode">{currentLanguageCode}</span>
+            <span className="languageCode">{currentLanguageCode}</span>
             <span className="arrow">▾</span>
             {isLanguageOpen && (
               <div className="language-menu">
