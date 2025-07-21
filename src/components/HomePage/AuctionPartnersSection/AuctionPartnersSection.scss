@@ -31,6 +31,10 @@
     gap: 60px;
     align-items: center;
     margin-top: 4rem;
+
+    &.paused {
+      animation-play-state: paused;
+    }
   }
 
   &__logo {

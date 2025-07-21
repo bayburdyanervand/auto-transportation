@@ -24,7 +24,7 @@ export const Header: React.FC = () => {
     setIsMenuOpen,
     handleModalToggle,
     handleLogout,
-    token, // <- добавлено
+    token,  
   } = useHeaderLogic();
 
   const location = useLocation();
@@ -104,7 +104,7 @@ export const Header: React.FC = () => {
 
           <div className="language-selector" onClick={handleLanguageToggle}>
             <span className="globe">🌐</span>
-            <span>{currentLanguageCode}</span>
+            <span className = "languageCode">{currentLanguageCode}</span>
             <span className="arrow">▾</span>
             {isLanguageOpen && (
               <div className="language-menu">

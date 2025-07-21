@@ -2,6 +2,7 @@ import React from 'react';
 import './LatestOffersSection.scss';
 //@ts-ignore
 import { TFunction } from 'react-i18next';
+import { useNavigate} from 'react-router-dom'
 
 import offer1 from '@/assets/images/ofers/ofer-1.png';
 import offer2 from '@/assets/images/ofers/ofer-2.png';
@@ -19,6 +20,7 @@ interface Offer {
 }
 
 const LatestOffersSection = ({ t }: { t: TFunction<'translation', undefined> }) => {
+  const navigate = useNavigate()
   const offers: Offer[] = t('latestOffers.offers', { returnObjects: true }) as Offer[];
   const images = [offer1, offer2, offer3];
   return (
@@ -44,7 +46,7 @@ const LatestOffersSection = ({ t }: { t: TFunction<'translation', undefined> }) 
           />
         ))}
       </div>
-      <button className={'latest-offers__show-more'}>{t('latestOffers.button')}</button>
+      <button className={'latest-offers__show-more'} onClick={() => navigate('/offers')}>{t('latestOffers.button')}</button>
     </section>
   );
 };

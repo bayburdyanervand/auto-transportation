@@ -90,7 +90,7 @@
       padding: 0.5rem 1rem;
       margin-left: 1rem;
       cursor: pointer;
-      font-size: 1rem;
+      font-size: 0.8rem;
       color: #333;
 
       &.active {
@@ -108,10 +108,9 @@
     background: none;
     border: none;
     padding: 0.5rem 1rem;
-    margin-left: 1rem;
+    margin-left: 0.6rem;
     cursor: pointer;
-    font-size: 1rem;
-    color: #333;
+    font-size: 0.8rem;
     transition: color 0.3s;
 
     &.active {
@@ -136,7 +135,7 @@
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    font-size: 1rem;
+    font-size: 0.8rem;
 
     &.login {
       background-color: #e9ecef;
@@ -174,6 +173,10 @@
       margin-right: 0.25rem;
     }
 
+    .languageCode{
+      font-size: 0.7rem;
+    }
+
     .arrow {
       margin-left: 0.25rem;
     }
@@ -197,7 +200,7 @@
       .language-option {
         padding: 0.25rem 1rem;
         cursor: pointer;
-        font-size: 1rem;
+        font-size: 0.8rem;
         color: #333;
 
         &:hover {
@@ -248,7 +251,7 @@
         padding: 0.5rem 0;
         text-align: left;
         cursor: pointer;
-        font-size: 1rem;
+        font-size: 0.8rem;
         color: #333;
 
         &:hover {

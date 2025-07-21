@@ -12,9 +12,9 @@
             "logout": "Logout",
             "applyNow": "Apply Now",
             "languages": {
-                "ru": "Russian",
+                "ru": "Русский",
                 "en": "English",
-                "ge": "Georgian"
+                "ge": "ქართული"
             }
         },
         "vinSearch": {
@@ -44,7 +44,11 @@
         "passwordPlaceholder": "Password",
         "rememberMe": "Remember me",
         "noAccount": "Don't have an account?",
-        "submit": "Login"
+        "submit": "Login",
+        "loading": "Loading...",
+        "validation": {
+            "invalidCredentials": "Invalid credentials"
+        }
     },
     "personalInfoForm": {
         "title": "Personal Information",
@@ -167,9 +171,13 @@
     },
     "managersSection": {
         "title": "Our Managers",
-        "subtitle": "Premium service is created by a premium team. Cargo Polo is a team of qualified and experienced professionals. Our managers are always ready to share their expertise and provide competent assistance. In addition to client-facing managers, our team includes about 100 back-office specialists, including the Cargo Polo office in the USA. Together, they deliver top-notch service, the quality of which you experience from the very first interaction with our managers, ultimately ensuring a high level of customer service.",
-        "requestCall": "Request a Call",
-        "viewMore": "View More"
+        "subtitle": "Premium service is created by a premium team. Cargo Polo is a team of qualified and experienced professionals. Our managers are always ready to share their knowledge and provide competent assistance. In addition to client-facing managers, our team includes about 100 back-office specialists, including a team at the Cargo Polo office in the USA. Together they create a first-class service, the quality of which you feel already at the stage of working with a manager, which ultimately ensures a high level of service for our clients.",
+        "requestCall": "Request a call",
+        "viewMore": "View more",
+        "error": {
+            "loadingError": "Failed to load managers information",
+            "tryLater": "Please try again later or contact us another way"
+        }
     },
     "auctions": {
         "auctionPartners.title": "Our Auctions",

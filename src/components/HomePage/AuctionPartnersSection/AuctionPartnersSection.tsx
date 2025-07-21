@@ -1,18 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './AuctionPartnersSection.scss';
 
 interface Auction {
   name: string;
-  image: string; 
+  image: string;
   url: string;
 }
 
 interface AuctionPartnersSectionProps {
-  t: (key: string) => string; 
-  auctions?: Auction[]; 
+  t: (key: string) => string;
+  auctions?: Auction[];
 }
 
 const AuctionPartnersSection: React.FC<AuctionPartnersSectionProps> = ({ t, auctions: backendAuctions }) => {
+  const [isPaused, setIsPaused] = useState(false);
+
   const defaultAuctions: Auction[] = [
     {
       name: 'Copart',
@@ -64,7 +66,11 @@ const AuctionPartnersSection: React.FC<AuctionPartnersSectionProps> = ({ t, auct
       <p className="auction-partners__description">{t('auctions.auctionPartners.description')}</p>
 
       <div className="auction-partners__slider">
-        <div className="auction-partners__track">
+        <div
+          className={`auction-partners__track ${isPaused ? 'paused' : ''}`}
+          onMouseEnter={() => setIsPaused(true)}
+          onMouseLeave={() => setIsPaused(false)}
+        >
           {[...auctions, ...auctions].map((auction, index) => (
             <a
               href={auction.url}
