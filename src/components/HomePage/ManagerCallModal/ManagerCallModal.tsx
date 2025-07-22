@@ -10,6 +10,7 @@ interface ManagerCallModalProps {
   onClose: () => void;
   managerImage: string;
   managerId: number;
+  telegramUsername?: string;
 }
 
 const ManagerCallModal: React.FC<ManagerCallModalProps> = ({
@@ -17,6 +18,7 @@ const ManagerCallModal: React.FC<ManagerCallModalProps> = ({
   onClose,
   managerImage,
   managerId,
+  telegramUsername,
 }) => {
   const {
     formData,
@@ -36,8 +38,22 @@ const ManagerCallModal: React.FC<ManagerCallModalProps> = ({
           <Dialog.Panel className="manager-call-modal__content">
             <div className="manager-call-modal__header">
               <img src={managerImage} alt="manager" />
+              {telegramUsername && telegramUsername.trim() ? (
+                <a
+                  href={`https://t.me/${telegramUsername.replace(/https:\/\/t\.me\//g, '')}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="manager-call-modal__telegram-link"
+                >
+                  Написать в Telegram
+                </a>
+              ) : (
+                <p>Telegram менеджера недоступен</p>
+              )}
             </div>
+
             <hr />
+
             <form className="manager-call-modal__form" onSubmit={handleSubmit}>
               <input
                 type="text"
@@ -88,6 +104,7 @@ const ManagerCallModal: React.FC<ManagerCallModalProps> = ({
                   {isLoading ? 'Отправка...' : 'Запросить звонок'}
                 </button>
               </div>
+
               {Object.values(errors).some(Boolean) && (
                 <div className="error">Пожалуйста, заполните все обязательные поля</div>
               )}

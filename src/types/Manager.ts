@@ -4,4 +4,5 @@ export interface Manager1 {
   email: string;
   phone: string;
   imageUrl: string;
+  telegramUsername?: string;
 }

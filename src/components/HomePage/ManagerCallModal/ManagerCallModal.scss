@@ -5,6 +5,26 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+
+    img {
+      width: 60px;
+      height: 60px;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+  }
+}
+
+.manager-call-modal__telegram-link,
+.manager-call-modal__header p {
+  margin: 0;
+  text-align: left;
 }
 
 .manager-call-overlay {
@@ -64,6 +84,20 @@
     font-size: 0.85rem;
     margin-top: 0.25rem;
   }
+}
+
+.manager-call-modal__telegram-link {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: #0088cc;
+  font-weight: 500;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.manager-call-modal__telegram-link:hover {
+  color: #005f8d;
 }
 
 .manager-call-modal__actions {

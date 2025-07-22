@@ -1,10 +1,6 @@
 package com.auto.backend.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import lombok.Data;
+import jakarta.persistence.*;
 
 @Entity
 public class Manager {
@@ -16,6 +12,12 @@ public class Manager {
     private String email;
     private String phone;
     private String imageUrl;
+
+    @Column(name = "telegram_chat_id")
+    private Long telegramChatId;
+
+    @Column(name = "telegram_username")
+    private String telegramUsername; // Новое поле для хранения @username
 
     public Long getId() {
         return id;
@@ -55,5 +57,21 @@ public class Manager {
 
     public void setImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
+    }
+
+    public Long getTelegramChatId() {
+        return telegramChatId;
+    }
+
+    public void setTelegramChatId(Long telegramChatId) { // Исправлено имя параметра
+        this.telegramChatId = telegramChatId;
+    }
+
+    public String getTelegramUsername() {
+        return telegramUsername;
+    }
+
+    public void setTelegramUsername(String telegramUsername) {
+        this.telegramUsername = telegramUsername;
     }
 }

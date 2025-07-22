@@ -13,13 +13,15 @@ public class ManagerCallService {
     private final ManagerRepository managerRepository;
     private final ManagerCallRequestRepository requestRepository;
     private final EmailService emailService;
+    private  final TelegramService telegramService;
 
     public ManagerCallService(ManagerRepository managerRepository,
                               ManagerCallRequestRepository requestRepository,
-                              EmailService emailService) {
+                              EmailService emailService, TelegramService telegramService) {
         this.managerRepository = managerRepository;
         this.requestRepository = requestRepository;
         this.emailService = emailService;
+        this.telegramService = telegramService;
     }
 
     public void handleCallRequest(Long managerId, ManagerCallRequestDTO dto) {
@@ -35,5 +37,17 @@ public class ManagerCallService {
 
         requestRepository.save(request);
         emailService.sendManagerNotification(manager.getEmail(), dto);
+
+        if (manager.getTelegramChatId() != null) {
+            String message = String.format(
+                    "📞 Новая заявка на звонок\n\n👤 %s\n📱 %s\n📧 %s\n🏙️ %s",
+                    dto.getFullName(),
+                    dto.getPhone(),
+                    dto.getEmail(),
+                    dto.getCity()
+            );
+            telegramService.sendNotificationToChatId(manager.getTelegramChatId(), message);
+        }
+
     }
 }

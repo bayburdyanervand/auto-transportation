@@ -18,6 +18,7 @@ const ManagersSection: React.FC<ManagersSectionProps> = ({ t }) => {
   const [selectedManager, setSelectedManager] = useState<Manager1 | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
+
   const openModal = (manager: Manager1) => {
     setSelectedManager(manager);
     setIsModalOpen(true);
@@ -97,6 +98,7 @@ const ManagersSection: React.FC<ManagersSectionProps> = ({ t }) => {
           onClose={closeModal}
           managerImage={selectedManager.imageUrl}
           managerId={selectedManager.id}
+          telegramUsername={selectedManager.telegramUsername}
         />
       )}
     </section>
