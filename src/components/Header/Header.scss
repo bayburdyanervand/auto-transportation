@@ -64,19 +64,49 @@
       flex: 1;
       min-width: 0;
     }
+    .vin-search__loading {
+      position: absolute;
+      right: -30px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 20px;
+      height: 20px;
+      animation: spin 1s linear infinite;
 
-    .vin-search__cancel {
-      background: none;
+      @keyframes spin {
+        100% {
+          transform: translateY(-50%) rotate(360deg);
+        }
+      }
+    }
+
+    .vin-search__button {
       border: none;
-      color: #888;
       margin-left: 1rem;
       font-size: 0.9rem;
       cursor: pointer;
       white-space: nowrap;
+      padding: 0.25rem 0.75rem;
+      border-radius: 1rem;
+      transition: all 0.3s ease;
 
-      &:hover {
-        text-decoration: underline;
-        color: #333;
+      &.cancel {
+        background: none;
+        color: #888;
+
+        &:hover {
+          text-decoration: underline;
+          color: #333;
+        }
+      }
+
+      &.search {
+        background-color: #007bff;
+        color: #fff;
+
+        &:hover {
+          background-color: #0056b3;
+        }
       }
     }
   }
@@ -129,13 +159,13 @@
       border-bottom: none;
 
       &::after {
-        content: '';
-      position: absolute;
-      bottom: 0;
-      left: 25%;
-      width: 50%;
-      height: 1px;  
-      background-color: #28a745;
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 25%;
+        width: 50%;
+        height: 1px;
+        background-color: #28a745;
       }
     }
 

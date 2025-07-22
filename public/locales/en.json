@@ -18,9 +18,14 @@
             }
         },
         "vinSearch": {
-            "placeholder": " Container"
+            "placeholder": "",
+            "invalidVin": "Неверный формат VIN. Должно быть 17 символов (буквы и цифры, кроме I, O, Q).",
+            "error": "Ошибка поиска VIN: {{errorMessage}}",
+            "authRequired": "Для поиска VIN требуется авторизация"
         },
-        "cancel": "Cancel"
+        "cancel": "Cancel",
+        "search": "Search",
+        "searchSuccess": "Поиск выполнен успешно"
     },
     "experienceSelection": {
         "title": "Select Your Experience Level",
@@ -185,7 +190,7 @@
     },
     "faqsection": {
         "title": "Frequently Asked Questions",
-        "subtitle":"Find answers to the most frequently asked questions and use our experience as a reliable resource on the path to your success",
+        "subtitle": "Find answers to the most frequently asked questions and use our experience as a reliable resource on the path to your success",
         "faqsection.items": {
             "1": {
                 "question": "Who is a dealer? (Or what exactly does this term mean?)",
@@ -213,7 +218,7 @@
         "footer.email": "Email:",
         "footer.emailAddress": "info@cargopolo.com",
         "footer.sitemap": "Sitemap",
-        "customerService":"Customer service",
+        "customerService": "Customer service",
         "footer.sitemapItems": [
             "Home",
             "About Us",
@@ -331,5 +336,17 @@
         "line4": "Накопленный опыт в сфере дилерских услуг способствует профессиональному росту нашей команды...",
         "line5": "Команда нашей компании насчитывает множество специалистов и менеджеров, которые напрямую общаются с дилерами...",
         "line6": "Они всегда на связи с внутренними отделами, складами и диспетчерами, формируя эффективную цепочку..."
+    },
+    "searchResults": {
+        "title": "Результаты поиска по VIN: {{vin}}",
+        "make": "Марка",
+        "model": "Модель",
+        "modelYear": "Год выпуска",
+        "manufacturer": "Производитель",
+        "vehicleType": "Тип транспортного средства",
+        "bodyClass": "Тип кузова",
+        "noData": "Данные не найдены. Попробуйте снова.",
+        "back": "Назад",
+        "loading": "Загрузка..."
     }
 }

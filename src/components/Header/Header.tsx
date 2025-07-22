@@ -1,4 +1,3 @@
-// src/components/Header/Header.tsx
 import React from 'react';
 import './Header.scss';
 import logoUrl from '@/assets/images/logo.png';
@@ -24,7 +23,10 @@ export const Header: React.FC = () => {
     setIsMenuOpen,
     handleModalToggle,
     handleLogout,
+    handleVinSearch,
     token,
+    isVinValid,
+    isLoading,  
   } = useHeaderLogic();
 
   const location = useLocation();
@@ -33,8 +35,8 @@ export const Header: React.FC = () => {
   return (
     <header className="header">
       <div className="header__left">
-        <div className="header__logo" >
-          <img src={logoUrl} alt="logo" className="logo" onClick={()  => navigate('/')}/>
+        <div className="header__logo">
+          <img src={logoUrl} alt="logo" className="logo" onClick={() => navigate('/')} />
         </div>
 
         <div className={`header__vin-search ${isSearchFocused ? 'focused' : ''}`}>
@@ -49,21 +51,29 @@ export const Header: React.FC = () => {
             onBlur={() => {
               setTimeout(() => setIsSearchFocused(false), 100);
             }}
-            onChange={(e) => setVin(e.target.value)}
+            onChange={(e) => setVin(e.target.value.toUpperCase())}
           />
           {isSearchFocused && (
-            <button
-              className="vin-search__cancel"
-              onMouseDown={(e) => {
-                e.preventDefault();
-                setVin('');
-                setIsSearchFocused(false);
-                const input = document.querySelector('.vin-search__input') as HTMLInputElement;
-                if (input) input.blur();
-              }}
-            >
-              {t('header.cancel')}
-            </button>
+            <div className="vin-search__actions">
+              <button
+                className={`vin-search__button ${isVinValid ? 'search' : 'cancel'}`}
+                onMouseDown={(e) => {
+                  e.preventDefault();
+                  if (isVinValid) {
+                    handleVinSearch();
+                  } else {
+                    setVin('');
+                    setIsSearchFocused(false);
+                    const input = document.querySelector('.vin-search__input') as HTMLInputElement;
+                    if (input) input.blur();
+                  }
+                }}
+                disabled={isLoading}  
+              >
+                {isLoading ? t('searchResults.loading') : isVinValid ? t('header.search') : t('header.cancel')}
+              </button>
+              {isLoading && <span className="vin-search__loading">{t('searchResults.loading')}</span>}
+            </div>
           )}
         </div>
       </div>
@@ -133,32 +143,50 @@ export const Header: React.FC = () => {
       {isMenuOpen && (
         <div className={`mobile-menu open`}>
           <nav className="mobile-nav">
-            <button className={`nav-button ${currentPath === '/' ? 'active' : ''}`} onClick={() => {
-              setIsMenuOpen(false);
-              navigate('/');
-            }}>
+            <button
+              className={`nav-button ${currentPath === '/' ? 'active' : ''}`}
+              onClick={() => {
+                setIsMenuOpen(false);
+                navigate('/');
+              }}
+            >
               {t('header.nav.home')}
             </button>
-            <button className={`nav-button ${currentPath === '/about' ? 'active' : ''}`} onClick={() => {
-              setIsMenuOpen(false);
-              navigate('/about');
-            }}>
+            <button
+              className={`nav-button ${currentPath === '/about' ? 'active' : ''}`}
+              onClick={() => {
+                setIsMenuOpen(false);
+                navigate('/about');
+              }}
+            >
               {t('header.nav.about')}
             </button>
-            <button className={`nav-button ${currentPath === '/services' ? 'active' : ''}`} onClick={() => {
-              setIsMenuOpen(false);
-              navigate('/services');
-            }}>{t('header.nav.services')}
+            <button
+              className={`nav-button ${currentPath === '/services' ? 'active' : ''}`}
+              onClick={() => {
+                setIsMenuOpen(false);
+                navigate('/services');
+              }}
+            >
+              {t('header.nav.services')}
             </button>
-            <button className={`nav-button ${currentPath === '/offers' ? 'active' : ''}`} onClick={() => {
-              setIsMenuOpen(false);
-              navigate('/offers');
-            }}>{t('header.nav.offers')}
+            <button
+              className={`nav-button ${currentPath === '/offers' ? 'active' : ''}`}
+              onClick={() => {
+                setIsMenuOpen(false);
+                navigate('/offers');
+              }}
+            >
+              {t('header.nav.offers')}
             </button>
-            <button className={`nav-button ${currentPath === '/support' ? 'active' : ''}`} onClick={() => {
-              setIsMenuOpen(false);
-              navigate('/support');
-            }}>{t('header.nav.support')}
+            <button
+              className={`nav-button ${currentPath === '/support' ? 'active' : ''}`}
+              onClick={() => {
+                setIsMenuOpen(false);
+                navigate('/support');
+              }}
+            >
+              {t('header.nav.support')}
             </button>
           </nav>
 

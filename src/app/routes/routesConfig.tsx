@@ -7,6 +7,7 @@ import ServicesPage from './../../components/ServicesPage/ServicesPage';
 import OffersPage from '@/components/OfferPage/OfferPage';
 import OfferDetailPage from '@/pages/OfferDetailPage/OfferDetailPage';
 import SupportPage from '@/components/SupportPage/SupportPage';
+import { SearchResults } from '@/components/SearchResults/SearchResults';
 
 export const routes = [
   {
@@ -37,12 +38,16 @@ export const routes = [
     path: '/offers',
     element: <OffersPage />,
   },
-   {
+  {
     path: '/offers/:id',
     element: <OfferDetailPage />
   },
   {
-  path: '/support',
-  element: <SupportPage />
-}
+    path: '/support',
+    element: <SupportPage />
+  },
+  {
+    path :'search-results',
+    element: <SearchResults/>
+  }
 ];

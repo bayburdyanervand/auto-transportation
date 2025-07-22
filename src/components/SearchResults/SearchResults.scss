@@ -1,0 +1,145 @@
+@import '../../assets/styles/variables';
+
+.search-results {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  animation: fadeIn 0.5s ease-in-out;
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  &__title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: $primary-color;  
+    margin-bottom: 2rem;
+    font-family: 'Tagesschrift', sans-serif;
+  }
+
+  &__card {
+    background-color: $background-color;  
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px $shadow-color;  
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1rem;
+    color: $text-color;  
+    padding: 0.5rem;
+    transition: background-color 0.2s ease;
+
+    &:hover {
+      background-color: rgba($primary-color, 0.05);
+      border-radius: 8px;
+    }
+  }
+
+  &__icon {
+    width: 50px;
+    height: 50px;
+    fill: $primary-color;  
+    transition: transform 0.2s ease, fill 0.2s ease;
+
+    &:hover {
+      transform: scale(1.1);
+      fill: darken($primary-color, 10%);
+    }
+  }
+
+  &__label {
+    font-weight: bold;
+    color: $primary-color; 
+    min-width: 150px;
+    text-align: left;
+    font-family: 'Tagesschrift', sans-serif;
+  }
+
+  &__value {
+    flex: 1;
+    text-align: left;
+    font-weight: normal;
+    font-family: 'Tagesschrift', sans-serif;
+  }
+
+  &__button {
+    margin-top: 2rem;
+    padding: 0.75rem 2rem;
+    background-color: $success-color;  
+    color: white;
+    border: none;
+    border-radius: 2rem;
+    cursor: pointer;
+    font-size: 1rem;
+    font-family: 'Tagesschrift', sans-serif;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: darken($success-color, 10%);
+    }
+  }
+
+  &__error {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1rem;
+    color: $danger-color;  
+    margin: 2rem 0;
+    font-family: 'Tagesschrift', sans-serif;
+  }
+
+  @media (max-width: 768px) {
+    padding: 1rem;
+
+    &__title {
+      font-size: 1.5rem;
+    }
+
+    &__card {
+      padding: 1rem;
+    }
+
+    &__item {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+
+    &__label {
+      min-width: auto;
+    }
+
+    &__button {
+      padding: 0.5rem 1.5rem;
+      font-size: 0.9rem;
+    }
+
+    &__icon {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}
